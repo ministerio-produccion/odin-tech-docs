@@ -811,9 +811,10 @@ GET      /categories/:id/image
 <li>
 <p><strong>updatedAt</strong></p>
 <p><em>Tipo:</em> datetime</p>
-<h2 id="default-fecha-y-hora-actuales"><em>Default:</em> fecha y hora actuales</h2>
+<p><em>Default:</em> fecha y hora actuales</p>
 </li>
 </ul>
+<hr />
 <h3 id="claves-foraneas_2">Claves Foráneas</h3>
 <ul>
 <li>
@@ -825,6 +826,7 @@ GET      /categories/:id/image
 <p><em>Model:</em>  user</p>
 </li>
 </ul>
+<hr />
 <h1 id="4-status">4. Status</h1>
 <h2 id="endpoints_3">Endpoints</h2>
 <pre><code>GET      /statuses
@@ -869,9 +871,12 @@ OPTIONS  /statuses/:id
 </li>
 <li>
 <p><strong>files</strong></p>
-<p><em>collection:</em> file
-<em>via:</em> status</p>
+<p><em>collection:</em> file</p>
+<p><em>via:</em> status</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>createdAt</strong></p>
 <p><em>Tipo:</em> datetime</p>
@@ -889,8 +894,8 @@ OPTIONS  /statuses/:id
 <ul>
 <li>
 <p><strong>datasets</strong></p>
-<p><em>collection:</em> dataset
-<em>via:</em> status</p>
+<p><em>collection:</em> dataset</p>
+<p><em>via:</em> status</p>
 </li>
 </ul>
 <hr />
@@ -1074,8 +1079,11 @@ OPTIONS  /updatefrequencies/:id
 <p><em>Tipo:</em> string</p>
 <p><em>Requerido:</em> sí</p>
 <p><em>Único:</em> sí</p>
-<h2 id="max-100-caracteres"><em>Max:</em> 100 carácteres</h2>
+<p><em>Max:</em> 100 carácteres</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>timePattern</strong></p>
 <p>Indica la frequencia en la que se correrá el cron</p>
@@ -1128,6 +1136,9 @@ OPTIONS  /tags/:id
 <p><em>Único:</em> sí</p>
 <p><em>Max:</em> 100 carácteres</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>slug</strong></p>
 <p><em>Tipo:</em> string</p>
@@ -1139,8 +1150,8 @@ OPTIONS  /tags/:id
 <ul>
 <li>
 <p><strong>files</strong></p>
-<p><em>collection:</em> file
-<em>via:</em> tags</p>
+<p><em>collection:</em> file</p>
+<p><em>via:</em> tags</p>
 </li>
 </ul>
 <hr />
@@ -1163,6 +1174,7 @@ OPTIONS  /tags/:id
 <p><em>Model:</em> user</p>
 </li>
 </ul>
+<hr />
 <h1 id="8-dataset">8. Dataset</h1>
 <h2 id="endpoints_7">Endpoints</h2>
 <pre><code>GET      /datasets
@@ -1341,43 +1353,62 @@ GET  /datasets/:id/download
 <hr />
 <ul>
 <li>
-<p><strong>tags</strong> {</p>
+<p><strong>tags</strong></p>
 <p><em>Collection:</em> tag</p>
 <p><em>Via:</em> datasets</p>
-<h2 id="dominant-true"><em>Dominant:</em> true</h2>
+<p><em>Dominant:</em> true</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>createdBy</strong></p>
 <p>El ID del usuario que creó el dataset.</p>
 <p><em>Tipo:</em> string</p>
 <p><em>Requerido:</em> sí</p>
 <p><em>Max:</em> 15 carácteres</p>
-<h2 id="model-user"><em>Model:</em> user</h2>
+<p><em>Model:</em> user</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>organization</strong></p>
-<h2 id="model-organization"><em>Model:</em> organization</h2>
+<p><em>Model:</em> organization</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>hasMap</strong></p>
 <p><em>Type:</em> boolean</p>
-<h2 id="defaultsto-false"><em>DefaultsTo:</em> false</h2>
+<p><em>DefaultsTo:</em> false</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>hasChart</strong></p>
 <p><em>Type:</em> boolean</p>
-<h2 id="defaultsto-false_1"><em>DefaultsTo:</em> false</h2>
+<p><em>DefaultsTo:</em> false</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>hasTable</strong></p>
 <p><em>Type:</em> boolean</p>
-<h2 id="defaultsto-false_2"><em>DefaultsTo:</em> false</h2>
-</li>
-<li>
-<p><strong>newestGatheringDate</strong></p>
-<h2 id="type-date"><em>type:</em> date</h2>
+<p><em>DefaultsTo:</em> false</p>
 </li>
 </ul>
+<hr />
+<ul>
+<li>
+<p><strong>newestGatheringDate</strong></p>
+<p><em>type:</em> date</p>
+</li>
+</ul>
+<hr />
 <h1 id="9-file">9. File</h1>
 <h2 id="endpoints_8">Endpoints</h2>
 <pre><code>GET      /files
@@ -1530,6 +1561,7 @@ GET      /files/:id/resources
 <p><em>Default:</em> fecha y hora actuales</p>
 </li>
 </ul>
+<hr />
 <h3 id="claves-foraneas_5">Claves Foráneas</h3>
 <ul>
 <li>
@@ -1611,15 +1643,21 @@ GET      /files/:id/resources
 <p>Servicio soap asociado.</p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 15 carácteres</p>
-<h2 id="model-soapservice"><em>Model:</em> soapservice</h2>
+<p><em>Model:</em> soapservice</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>restService:</strong></p>
 <p>Servicio rest asociado.</p>
 <p><em>Tipo:</em> string</p>
 <p><em>Max:</em> 15 carácteres</p>
-<h2 id="model-restservice"><em>Model:</em> restservice</h2>
+<p><em>Model:</em> restservice</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>tags</strong></p>
 <p><em>collection:</em> tag</p>
@@ -1961,6 +1999,7 @@ OPTIONS  /basemaps/:id
 <p><em>Default:</em> fecha y hora actuales</p>
 </li>
 </ul>
+<hr />
 <h1 id="12-map">12. Map</h1>
 <h2 id="endpoints_11">Endpoints</h2>
 <pre><code>GET      /maps
@@ -2007,8 +2046,11 @@ PATCH   /maps/:id/review
 <p><em>Requerido:</em> sí</p>
 <p><em>Único:</em> sí</p>
 <p><em>Max:</em> 150 carácteres</p>
-<h2 id="min-1-caracter"><em>Min:</em> 1 carácter</h2>
+<p><em>Min:</em> 1 carácter</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>description</strong></p>
 <p><em>Tipo:</em> string</p>
@@ -2102,6 +2144,7 @@ PATCH   /maps/:id/review
 <p><em>Default:</em> fecha y hora actuales</p>
 </li>
 </ul>
+<hr />
 <h3 id="claves-foraneas_7">Claves Foráneas</h3>
 <ul>
 <li>
@@ -2128,8 +2171,11 @@ PATCH   /maps/:id/review
 <p><strong>status</strong></p>
 <p>El ID del status que posee el mapa.</p>
 <p><em>Requerido:</em> sí</p>
-<h2 id="max-15-caracteres"><em>Max:</em> 15 carácteres</h2>
+<p><em>Max:</em> 15 carácteres</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>kml</strong></p>
 <p><em>Type:</em> boolean</p>
@@ -2260,12 +2306,16 @@ OPTIONS  /configs/:id
 <p><strong>tooltip</strong></p>
 <p><em>type:</em> string</p>
 </li>
+</ul>
+<hr />
+<ul>
 <li>
 <p><strong>updatedAt</strong></p>
 <p><em>Tipo:</em> datetime</p>
 <p><em>Default:</em> fecha y hora actuales</p>
 </li>
 </ul>
+<hr />
 <h3 id="claves-foraneas_8">Claves Foráneas</h3>
 <ul>
 <li>
@@ -2285,6 +2335,7 @@ OPTIONS  /configs/:id
 <p><em>Model:</em> config</p>
 </li>
 </ul>
+<hr />
 <h1 id="14-log">14. Log</h1>
 <h2 id="endpoints_13">Endpoints</h2>
 <pre><code>GET      /logs
@@ -2356,6 +2407,7 @@ OPTIONS  /logs/:id
 <p><em>Default:</em> fecha y hora actuales</p>
 </li>
 </ul>
+<hr />
 <h3 id="claves-foraneas_9">Claves Foráneas</h3>
 <ul>
 <li>
@@ -2366,6 +2418,7 @@ OPTIONS  /logs/:id
 <p><em>Model:</em> user</p>
 </li>
 </ul>
+<hr />
 <h1 id="15-statistic">15. Statistic</h1>
 <h2 id="endpoints_14">Endpoints</h2>
 <pre><code>GET      /statistics
@@ -2545,6 +2598,7 @@ OPTIONS  /soapservices/:id
 <p><em>Default:</em> fecha y hora actuales</p>
 </li>
 </ul>
+<hr />
 <h3 id="claves-foraneas_10">Claves Foráneas</h3>
 <ul>
 <li>
@@ -2677,6 +2731,7 @@ OPTIONS  /restservices/:id
 <p><em>Default:</em> fecha y hora actuales</p>
 </li>
 </ul>
+<hr />
 <h3 id="claves-foraneas_11">Claves Foráneas</h3>
 <ul>
 <li>
@@ -2687,6 +2742,7 @@ OPTIONS  /restservices/:id
 <p><em>Model</em> file</p>
 </li>
 </ul>
+<hr />
               
             </article>
           </div>
