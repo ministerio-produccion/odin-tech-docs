@@ -430,6 +430,7 @@ GET      /categories/:id/image
     *Tipo:* datetime
 
     *Default:* fecha y hora actuales
+
 ---
 
 ### Claves Foráneas
@@ -445,6 +446,8 @@ GET      /categories/:id/image
     *Max:* 15 carácteres
 
     *Model:*  user
+
+---
 
 # 4. Status
 ## Endpoints
@@ -498,8 +501,10 @@ OPTIONS  /statuses/:id
 - **files**
 
     *collection:* file
+
     *via:* status
 
+---
 
 - **createdAt**
 
@@ -518,6 +523,7 @@ OPTIONS  /statuses/:id
 - **datasets**
 
     *collection:* dataset
+
     *via:* status
 
 --- 
@@ -709,6 +715,7 @@ OPTIONS  /updatefrequencies/:id
     *Único:* sí
 
     *Max:* 100 carácteres
+
 ---
 
 - **timePattern**
@@ -770,6 +777,7 @@ OPTIONS  /tags/:id
 
     *Max:* 100 carácteres
 
+---
 
 - **slug**
 
@@ -784,6 +792,7 @@ OPTIONS  /tags/:id
 - **files**
 
     *collection:* file
+
     *via:* tags
 
 ---
@@ -808,6 +817,8 @@ OPTIONS  /tags/:id
     *Max:* 15 carácteres
 
     *Model:* user
+
+---    
 
 # 8. Dataset
 ## Endpoints
@@ -999,13 +1010,14 @@ GET  /datasets/:id/download
 
 ---
 
-- **tags** {
+- **tags**
 
     *Collection:* tag
 
     *Via:* datasets
            
     *Dominant:* true
+
 ---
 
 - **createdBy**
@@ -1019,11 +1031,13 @@ GET  /datasets/:id/download
     *Max:* 15 carácteres
 
     *Model:* user
+
 ---
 
 - **organization**
 
     *Model:* organization
+
 ---    
 
 - **hasMap**
@@ -1031,6 +1045,7 @@ GET  /datasets/:id/download
     *Type:* boolean
 
     *DefaultsTo:* false
+
 ---
 
 - **hasChart**
@@ -1038,6 +1053,7 @@ GET  /datasets/:id/download
     *Type:* boolean
 
     *DefaultsTo:* false
+
 ---
 
 - **hasTable**
@@ -1045,11 +1061,13 @@ GET  /datasets/:id/download
     *Type:* boolean
 
     *DefaultsTo:* false
+
 ---
 
 - **newestGatheringDate**
 
     *type:* date
+
 ---
 
           
@@ -1174,7 +1192,6 @@ GET      /files/:id/resources
 
     *defaultsTo:* false
 
-
 ---
 
 - **updated**
@@ -1184,7 +1201,6 @@ GET      /files/:id/resources
     *Tipo:* boolean
 
     *defaultsTo:* false
-
 
 ---
 
@@ -1214,6 +1230,7 @@ GET      /files/:id/resources
 
     *Default:* fecha y hora actuales
 
+---
 
 ### Claves Foráneas
 
@@ -1318,6 +1335,7 @@ GET      /files/:id/resources
     *Max:* 15 carácteres
 
     *Model:* soapservice
+
 ---
 
 - **restService:**
@@ -1329,6 +1347,7 @@ GET      /files/:id/resources
     *Max:* 15 carácteres
 
     *Model:* restservice
+
 ---
 
 
@@ -1684,6 +1703,8 @@ OPTIONS  /basemaps/:id
 
     *Default:* fecha y hora actuales
 
+---    
+
 # 12. Map
 ## Endpoints
 ```
@@ -1737,6 +1758,7 @@ PATCH   /maps/:id/review
     *Max:* 150 carácteres
 
     *Min:* 1 carácter
+
 ---
 
 - **description**
@@ -1832,6 +1854,8 @@ PATCH   /maps/:id/review
 
     *Default:* fecha y hora actuales
 
+---    
+
 ### Claves Foráneas
 
 - **basemap**
@@ -1865,6 +1889,7 @@ PATCH   /maps/:id/review
     *Requerido:* sí
 
     *Max:* 15 carácteres
+
 ---
 
 - **kml**
@@ -1874,7 +1899,7 @@ PATCH   /maps/:id/review
 
     *DefaultsTo:* false
 
- ---   
+---   
 
 # 13. Config
 ## Endpoints
@@ -2007,12 +2032,15 @@ OPTIONS  /configs/:id
 
     *type:* string
 
+---    
+
 - **updatedAt**
 
     *Tipo:* datetime
 
     *Default:* fecha y hora actuales
 
+---
 ### Claves Foráneas
 
 - **updatedBy**
@@ -2034,6 +2062,8 @@ OPTIONS  /configs/:id
     *Max:* 15 carácteres
 
     *Model:* config
+
+---    
 
 # 14. Log
 ## Endpoints
@@ -2112,6 +2142,8 @@ OPTIONS  /logs/:id
 
     *Default:* fecha y hora actuales
 
+---    
+
 ### Claves Foráneas
 
 - **user**
@@ -2123,6 +2155,8 @@ OPTIONS  /logs/:id
     *Max:* 15 carácteres
 
     *Model:* user
+
+---    
 
 # 15. Statistic
 ## Endpoints
@@ -2314,6 +2348,7 @@ OPTIONS  /soapservices/:id
 
     *Default:* fecha y hora actuales
 
+---
 ### Claves Foráneas
 
 - **file**
@@ -2455,6 +2490,8 @@ OPTIONS  /restservices/:id
 
     *Default:* fecha y hora actuales
 
+---    
+
 ### Claves Foráneas
 
 - **file**
@@ -2466,3 +2503,5 @@ OPTIONS  /restservices/:id
     *Max:* 15 carácteres
 
     *Model* file
+
+---    
